@@ -4,9 +4,6 @@ const questionSchema = mongoose.Schema({
     question :{
         type:String
     },
-    answer:{
-        type:String
-    },
     option1:{
         type:String
     },
@@ -15,6 +12,12 @@ const questionSchema = mongoose.Schema({
     },
     option3:{
         type:String
+    },
+    option4:{
+        type:String
+    },
+    answerNo:{
+        type:Number
     }
 })
 

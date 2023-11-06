@@ -45,9 +45,9 @@ const acceptUser = async (req,res)=>{
 
 const addQuestion = async (req,res)=>{
     try {
-        const {question,answer,option1,option2,option3} = req.body
+        const {question,option4,answerNo,option1,option2,option3} = req.body
 
-        await questionModel.create({question,answer,option1,option2,option3})
+        await questionModel.create({question,option4,answerNo,option1,option2,option3})
         res.status(200).json({message:"Question added successfully"})
     } catch (error) {
         console.log(error);
