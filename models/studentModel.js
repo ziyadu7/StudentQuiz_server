@@ -14,6 +14,10 @@ const studentSchema = mongoose.Schema({
     isAccepted:{
         type:Boolean,
         default:false
+    },
+    isAttend:{
+        type:Boolean,
+        default:false
     }
 })
 

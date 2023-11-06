@@ -55,8 +55,7 @@ const Login = async (req,res) =>{
  const submitQuiz = async (req,res)=>{
     try {
         const {mark,studentId} = req.body
-
-        await studentModel.updateOne({_id:studentId},{$set:{mark}})
+        await studentModel.updateOne({_id:studentId},{$set:{mark,isAttend:true}})
         res.status(200).json({message:"Successfully submited"})
     } catch (error) {
         console.log(error);
