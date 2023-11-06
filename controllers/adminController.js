@@ -6,8 +6,8 @@ const {generateToken} = require('../middlewares/auth')
 const login = async (req,res)=>{
     try {
         const {name,password} = req.body
-        const admin = await adminModel.findOne({$and:[name,password]})
-
+        const admin = await adminModel.findOne({$and:[{name},{password}]})
+        console.log(admin);
         if(admin){
             const token = generateToken(admin._id,'admin')
             res.status(200).json({message:'Login successfull',admin,token})
