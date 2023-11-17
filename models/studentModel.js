@@ -18,6 +18,10 @@ const studentSchema = mongoose.Schema({
     isAttend:{
         type:Boolean,
         default:false
+    },
+    noOfTry:{
+        type:Number,
+        default:0
     }
 })
 

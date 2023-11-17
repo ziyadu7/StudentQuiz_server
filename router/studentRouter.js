@@ -6,6 +6,7 @@ const auth = require('../middlewares/auth')
 router.post('/register',studentController.Register)
 router.post('/login',studentController.Login)
 router.post('/submitQuiz',auth.verifyStudentToken,studentController.submitQuiz)
+router.patch('/tryAgain',auth.verifyStudentToken,studentController.tryAgain)
 router.get('/getQuestions',auth.verifyStudentToken,studentController.getQuestions)
 
 module.exports = router
