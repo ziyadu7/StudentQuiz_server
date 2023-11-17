@@ -34,7 +34,7 @@ const Login = async (req, res) => {
                 res.status(403).json({ errMsg: 'Blocked by admin' })
             }
         } else {
-            res.status(400).json({ errMsg: 'User Not Found' })
+            res.status(400).json({ errMsg: 'Username or password not match' })
         }
     } catch (error) {
         console.log(error);
